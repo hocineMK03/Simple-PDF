@@ -240,7 +240,7 @@ QPushButton#toggleChip:checked:hover {{
 
 /* ---- Inputs ---- */
 
-QComboBox, QLineEdit, QSpinBox {{
+QComboBox, QLineEdit, QSpinBox, QTextEdit {{
     background: {COLORS["surface"]};
     border: 1px solid {COLORS["border"]};
     border-radius: 8px;
@@ -248,7 +248,7 @@ QComboBox, QLineEdit, QSpinBox {{
     color: {COLORS["text_primary"]};
 }}
 
-QComboBox:hover, QLineEdit:hover, QSpinBox:hover {{
+QComboBox:hover, QLineEdit:hover, QSpinBox:hover, QTextEdit:hover {{
     border-color: {COLORS["border_hover"]};
 }}
 

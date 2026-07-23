@@ -14,16 +14,19 @@ from PySide6.QtWidgets import (
 
 from app.theme import apply_theme
 from app.navigation import Router
+from app.pages.ai_summarizer import AiSummarizerPage
+from app.pages.compress import CompressPage
 from app.pages.home import HomePage
 from app.pages.image_to_pdf import ImageToPdfPage
 from app.pages.pdf_to_images import PdfToImagesPage
+from app.pages.watermark import WatermarkPage
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("OpenPDF Studio")
+        self.setWindowTitle("Simple PDF")
         self.resize(1300, 800)
 
         central = QWidget()
@@ -42,12 +45,21 @@ class MainWindow(QMainWindow):
         self.router = Router(self.stack)
         self.router.pageChanged.connect(self._on_page_changed)
 
-        self.router.register("home", HomePage(self.router), "OpenPDF Studio")
+        self.router.register("home", HomePage(self.router), "Simple PDF")
         self.router.register(
             "pdf_to_images", PdfToImagesPage(self.router), "PDF → Images"
         )
         self.router.register(
             "image_to_pdf", ImageToPdfPage(self.router), "Images → PDF"
+        )
+        self.router.register(
+            "compress", CompressPage(self.router), "Compress PDF"
+        )
+        self.router.register(
+            "watermark", WatermarkPage(self.router), "Watermark PDF"
+        )
+        self.router.register(
+            "ai_summarizer", AiSummarizerPage(self.router), "AI Summarizer"
         )
 
         self.router.go_to("home")

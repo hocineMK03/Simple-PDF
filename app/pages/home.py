@@ -16,12 +16,15 @@ MAX_COLUMNS = 6
 TOOLS = [
     ("Merge PDF", "Combine multiple PDF files into one document.", "app/assets/home/merge.svg", None),
     ("Split PDF", "Split PDFs into multiple documents.", "app/assets/home/split.svg", None),
-    ("Compress", "Reduce PDF size while preserving quality.", "app/assets/home/compress.svg", None),
+    ("Compress", "Reduce PDF size while preserving quality.", "app/assets/home/compress.svg", "compress"),
     ("Rotate", "Rotate one or more PDF pages.", "app/assets/home/rotate.svg", None),
     ("Images → PDF", "Convert JPG and PNG images into PDF.", "app/assets/home/image_to_pdf.svg", "image_to_pdf"),
     ("PDF → Images", "Export PDF pages as images.", "app/assets/home/pdf_to_image.svg", "pdf_to_images"),
     ("Protect", "Encrypt your PDF with a password.", "app/assets/home/lock.svg", None),
-    ("Watermark", "Add text or image watermarks.", "app/assets/home/watermark.svg", None),
+    ("Watermark", "Add text or image watermarks.", "app/assets/home/watermark.svg", "watermark"),
+    ("PDF → Word", "Convert PDFs into editable Word documents.", "app/assets/home/pdf_to_word.svg", None),
+    ("Translate PDF", "Translate a PDF's text into another language.", "app/assets/home/translate.svg", None),
+    ("AI Summarizer", "Generate a quick AI summary of a PDF.", "app/assets/home/ai_summarizer.svg", "ai_summarizer"),
 ]
 
 
@@ -43,7 +46,7 @@ class HomePage(QWidget):
         root.setContentsMargins(50, 40, 50, 40)
         root.setSpacing(25)
 
-        title = QLabel("OpenPDF Studio")
+        title = QLabel("Simple PDF")
         title.setObjectName("pageTitle")
 
         subtitle = QLabel("Free • Offline • Open Source PDF Toolkit")
