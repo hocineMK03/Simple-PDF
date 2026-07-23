@@ -13,11 +13,11 @@ This tool processes files entirely on your local machine, except for the **AI Su
 
 ## Features
 
-- **Compress PDF** — shrink file size with Lossless, Recommended, or Maximum presets by downscaling and re-encoding embedded images.
-- **Images → PDF** — combine JPG/PNG/BMP/WEBP/TIFF images into a single PDF, with page size and orientation options.
-- **PDF → Images** — export PDF pages as PNG or JPEG, packaged into a zip.
-- **Watermark** — stamp a text or image watermark across one or more PDFs, tiled or centered, with adjustable opacity and rotation.
-- **AI Summarizer** — generate a short, medium, or detailed summary of a PDF using your own OpenAI-compatible LLM API (base URL + API key + model).
+- **Compress PDF** : shrink file size with Lossless, Recommended, or Maximum presets by downscaling and re-encoding embedded images.
+- **Images → PDF** : combine JPG/PNG/BMP/WEBP/TIFF images into a single PDF, with page size and orientation options.
+- **PDF → Images** : export PDF pages as PNG or JPEG, packaged into a zip.
+- **Watermark** : stamp a text or image watermark across one or more PDFs, tiled or centered, with adjustable opacity and rotation.
+- **AI Summarizer** : generate a short, medium, or detailed summary of a PDF using your own OpenAI-compatible LLM API (base URL + API key + model).
 
 All tools support batch processing where it makes sense (multiple files in, one output per file).
 
